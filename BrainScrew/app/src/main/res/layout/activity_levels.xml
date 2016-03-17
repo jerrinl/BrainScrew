@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ics466.brainscrew.LevelsActivity"
+    android:background="#000000">
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:src="@drawable/levels_start"
+        android:scaleType="fitCenter"
+
+        android:id="@+id/imageButtonStart"
+        android:cropToPadding="false"
+        android:background="#000000"
+        android:onClick="startClick"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="57dp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:id="@+id/imageViewMode"
+        android:src="@drawable/levels_classicmode"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewDifficulty"
+        android:src="@drawable/levels_difficulty"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/imageView"
+        android:layout_alignStart="@+id/imageViewMode" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButtonArrowLeft"
+        android:src="@drawable/levels_arrowleft"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/imageButtonStart" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButtonArrowRight"
+        android:src="@drawable/levels_arrowright"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:layout_alignTop="@+id/imageButtonArrowLeft"
+        android:layout_toEndOf="@+id/imageButtonStart" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/levels_med"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imageButtonArrowLeft" />
+
+
+</RelativeLayout>
