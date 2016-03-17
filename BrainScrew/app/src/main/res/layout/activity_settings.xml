@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ics466.brainscrew.SettingsActivity"
-    android:background="#000000">
+    android:background="@color/background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="78dp"
-        android:textColor="#ffffff" />
+        android:textColor="@color/text_default" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="117dp"
-        android:textColor="#ffffff" />
+        android:textColor="@color/text_default" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
         android:text="VOLUME"
         android:id="@+id/textView"
         android:textSize="35dp"
-        android:textColor="#ffffff"
+        android:textColor="@color/text_default"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
 
