@@ -11,6 +11,26 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
+
+    public void onPause() {
+        super.onPause();  // Always call the superclass method first
+
+
+    }
+
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
     }
 
 //    //when MUSIC switch 'clicked'
@@ -35,7 +55,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     //MainMenu button clicked
     public void gotoMain(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Intent main= new Intent(this, MainActivity.class);
+        main.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(main);
     }
 }

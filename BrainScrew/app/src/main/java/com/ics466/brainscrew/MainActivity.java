@@ -57,10 +57,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(settings);
     }
 
-//    public void statsSelect(View view) {
-//        Intent stats = new Intent(this, );
-//        startActivity(stats);
-//    }
+    public void statsSelect(View view) {
+        Intent stats = new Intent(this, StatsActivity.class);
+        startActivity(stats);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
