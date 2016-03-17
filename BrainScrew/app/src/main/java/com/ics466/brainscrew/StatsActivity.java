@@ -5,31 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class SettingsActivity extends AppCompatActivity {
+public class StatsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_stats);
     }
 
-//    //when MUSIC switch 'clicked'
-//    public void switchMusic() {
+//    //Left Arrow clicked
+//    public void scrollLeft() {
 //
 //    }
 //
-//    //when SFX swtich 'clicked'
-//    public void switchSFX() {
-//
-//    }
-//
-//    //FB button clicked
-//    public void shareFB() {
-//
-//    }
-//
-//    //Twitter button clicked
-//    public void shareTwitter(){
+//    //Right Arrow clicked
+//    public void scrollRight() {
 //
 //    }
 
