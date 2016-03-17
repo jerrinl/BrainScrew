@@ -40,7 +40,8 @@
         <activity android:name=".activity_settings" />
         <activity android:name=".LevelsActivity" />
         <activity android:name=".GameplayActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".StatsActivity"></activity>
     </application>
 
 </manifest>

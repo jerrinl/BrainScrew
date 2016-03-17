@@ -18,9 +18,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //main to use for testing
-        //main2 was original activity_main
         setContentView(R.layout.activity_main);
 
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -30,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         // Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
+//      Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//      setSupportActionBar(toolbar);
 
     }
 
