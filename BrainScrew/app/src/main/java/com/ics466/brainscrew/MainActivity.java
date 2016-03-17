@@ -1,6 +1,8 @@
 package com.ics466.brainscrew;
 
+import android.app.ActionBar;
 import android.content.Intent;
+import android.media.audiofx.BassBoost;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,16 +23,45 @@ public class MainActivity extends AppCompatActivity {
         //main2 was original activity_main
         setContentView(R.layout.activity_main);
 
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
 
     }
 
-    public void startTest(View view) {
-        Intent intent = new Intent(this, LevelsActivity.class);
-        startActivity(intent);
+    public void onPause() {
+        super.onPause();  // Always call the superclass method first
+
+
     }
+
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+
+        View decorView = getWindow().getDecorView();
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
+
+    public void levelSelect(View view) {
+        Intent level = new Intent(this, LevelsActivity.class);
+        startActivity(level);
+    }
+
+    public void settingsSelect(View view) {
+        Intent settings = new Intent(this, SettingsActivity.class);
+        startActivity(settings);
+    }
+
+//    public void statsSelect(View view) {
+//        Intent stats = new Intent(this, );
+//        startActivity(stats);
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.ics466.brainscrew.MainActivity">
+    tools:context="com.ics466.brainscrew.MainActivity"
+    android:background="@color/background">
 
+    <ImageView
+        android:id="@+id/brain"
+        android:src="@drawable/brain"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/title"
+        android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:id="@+id/title"
+        android:src="@drawable/home_title"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <ImageView
+        android:id="@+id/play"
+        android:src="@drawable/home_play_icon"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="115dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="levelSelect" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:src="@drawable/home_settings_icon"
+        android:layout_width="142dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_alignTop="@+id/play"
+        android:layout_centerHorizontal="true"
+        android:onClick="settingsSelect" />
+
+    <ImageView
+        android:id="@+id/stats"
+        android:src="@drawable/home_stats_icon"
+        android:layout_width="142dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/settings"
+        android:layout_centerHorizontal="true"
+        android:onClick="statsSelect"/>
+
+</RelativeLayout>

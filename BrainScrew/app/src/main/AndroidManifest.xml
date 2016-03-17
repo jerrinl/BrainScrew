@@ -7,7 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -27,21 +27,20 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <!--<activity-->
-            <!--android:name=".FullscreenActivity"-->
-          <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
-            <!--android:label="@string/title_activity_fullscreen"-->
-            <!--android:parentActivityName=".MainActivity"-->
-            <!--android:theme="@style/FullscreenTheme">-->
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value="com.ics466.brainscrew.MainActivity" />-->
-        <!--</activity>-->
+        <!-- <activity -->
+        <!-- android:name=".FullscreenActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <!-- android:label="@string/title_activity_fullscreen" -->
+        <!-- android:parentActivityName=".MainActivity" -->
+        <!-- android:theme="@style/FullscreenTheme"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.PARENT_ACTIVITY" -->
+        <!-- android:value="com.ics466.brainscrew.MainActivity" /> -->
+        <!-- </activity> -->
         <activity android:name=".activity_settings" />
         <activity android:name=".LevelsActivity" />
         <activity android:name=".GameplayActivity" />
-        <activity android:name=".SettingsActivity">
-</activity>
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>
