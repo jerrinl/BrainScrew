@@ -8,18 +8,21 @@ import android.widget.Button;
 
 public class LevelsActivity extends AppCompatActivity {
 
-    Button startButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
-
     }
 
+    //Setting button clicked
     public void startClick(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+
+    //Right arrow clicked
+
+    //Left arrow clicked
+
 }
 
