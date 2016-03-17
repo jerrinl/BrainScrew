@@ -18,6 +18,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/FullscreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ics466.brainscrew.MainActivity" />
+        </activity>
+        <activity android:name=".activity_settings" />
+        <activity android:name=".LevelsActivity" />
+        <activity android:name=".GameplayActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>
