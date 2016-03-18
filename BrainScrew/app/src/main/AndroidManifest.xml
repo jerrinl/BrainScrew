@@ -37,11 +37,26 @@
         <!-- android:name="android.support.PARENT_ACTIVITY" -->
         <!-- android:value="com.ics466.brainscrew.MainActivity" /> -->
         <!-- </activity> -->
-        <activity android:name=".activity_settings" />
-        <activity android:name=".LevelsActivity" />
+        <activity android:name=".LevelsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ics466.brainscrew.MainActivity" />
+        </activity>
+        <activity android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ics466.brainscrew.MainActivity" />
+        </activity>
+
+        <activity android:name=".StatsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ics466.brainscrew.MainActivity" />
+        </activity>
         <activity android:name=".GameplayActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".StatsActivity"></activity>
     </application>
 
 </manifest>

@@ -65,23 +65,23 @@
         android:layout_toEndOf="@+id/imageButtonStart"
         android:onClick="onRight" />
 
-    <!--<ImageView-->
-        <!--android:layout_width="200dp"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:id="@+id/hardDiff"-->
-        <!--android:src="@drawable/levels_hard"-->
-        <!--android:scaleType="fitCenter"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_toEndOf="@+id/imageButtonArrowLeft" />-->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/medDiff"
+        android:src="@drawable/levels_med"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imageButtonArrowLeft" />
 
-    <!--<ImageView-->
-        <!--android:layout_width="200dp"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:id="@+id/medDiff"-->
-        <!--android:src="@drawable/levels_med"-->
-        <!--android:scaleType="fitCenter"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_toEndOf="@+id/imageButtonArrowLeft" />-->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/hardDiff"
+        android:src="@drawable/levels_hard"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imageButtonArrowLeft" />
 
     <ImageView
         android:layout_width="200dp"

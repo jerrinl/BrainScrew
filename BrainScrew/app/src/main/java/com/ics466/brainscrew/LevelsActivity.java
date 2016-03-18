@@ -11,14 +11,14 @@ import android.widget.ImageView;
 public class LevelsActivity extends AppCompatActivity {
 
     ImageView easyView, medView, hardView;
-
+    //ImageView object in activity_levels.xml
+    ImageView iview;
     //button in GUI defined in main.xml
     ImageButton image_button;
-    //ImageView object in GUI defined in main.xml
-    ImageView iview = (ImageView) findViewById(R.id.easyDiff);;
     //Array of images that will cycle through and display in ImageView
     // represented by their IDS
-    Integer[] imageIds = {R.drawable.levels_easy, R.drawable.levels_med, R.drawable.levels_hard};
+    Integer[] imageDrawables = {R.drawable.levels_easy, R.drawable.levels_med, R.drawable.levels_hard};
+    Integer[] imageIds = {R.id.easyDiff, R.id.medDiff, R.id.hardDiff};
     //image index to cycle through images defined in imageIds
     int image_index = 0;
 
@@ -52,7 +52,7 @@ public class LevelsActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    //Setting button clicked
+    //Start button clicked
     public void startClick(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
@@ -65,6 +65,7 @@ public class LevelsActivity extends AppCompatActivity {
         //create handle to our Image View
         image_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                iview = (ImageView) findViewById(imageIds[image_index]);
                 image_index++;
                 //if at end of image array return to the first image
                 if (image_index >= imageIds.length){
@@ -72,27 +73,26 @@ public class LevelsActivity extends AppCompatActivity {
                 }
 
                 // change the image to next image in imageIds array
-                iview.setImageResource(imageIds[image_index]);
-
+                iview.setImageResource(imageDrawables[image_index]);
             }
         });
     }
 
-    //Left arrow clicked0
+    //Left arrow clicked
     public void onLeft(View view) {
         //create a handle to our button so we can do event handling on it
-        image_button = (ImageButton) findViewById(R.id.imageButtonArrowRight);
+        image_button = (ImageButton) findViewById(R.id.imageButtonArrowLeft);
         //create handle to our Image View
         image_button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                iview = (ImageView) findViewById(imageIds[image_index]);
                 image_index--;
                 //if at end of image array return to the first image
                 if (image_index <= 0){
                     image_index = imageIds.length-1;
                 }
-
                 // change the image to next image in imageIds array
-                iview.setImageResource(imageIds[image_index]);
+                iview.setImageResource(imageDrawables[image_index]);
             }
         });
     }
