@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ics466.brainscrew.SettingsActivity"
-    android:background="#000000">
+    android:background="@color/background">
 
     <TextView
         android:layout_width="250dp"
@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="74dp"
-        android:textColor="#ffffff"
+        android:textColor="@color/text_default"
         android:textSize="45dp"
         android:textStyle="bold"
         android:textAlignment="center" />
@@ -26,7 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="MUSIC"
         android:id="@+id/textViewMusic"
-        android:textColor="#ffffff"
+        android:textColor="@color/text_default"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textAlignment="textStart"
@@ -42,7 +42,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="SFX"
         android:id="@+id/textViewSFX"
-        android:textColor="#ffffff"
+        android:textColor="@color/text_default"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textAlignment="textStart"
@@ -58,7 +58,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="SOCIAL"
         android:id="@+id/textViewSocial"
-        android:textColor="#ffffff"
+        android:textColor="@color/text_default"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textAlignment="textStart"
@@ -73,7 +73,7 @@
         android:layout_height="40dp"
         android:id="@+id/imageButtonTwitter"
         android:src="@drawable/settings_twitter"
-        android:background="#000000"
+        android:background="@color/background"
         android:scaleType="fitCenter"
         android:layout_alignTop="@+id/imageButtonFB"
         android:layout_toRightOf="@+id/imageButtonFB" />
@@ -83,7 +83,7 @@
         android:layout_height="40dp"
         android:id="@+id/imageButtonFB"
         android:src="@drawable/settings_fb"
-        android:background="#000000"
+        android:background="@color/background"
         android:scaleType="fitCenter"
         android:layout_alignTop="@+id/textViewSocial"
         android:layout_toEndOf="@+id/textViewSocial" />
@@ -108,7 +108,7 @@
         android:background="#000000"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="gotoMain"/>
+        android:onClick="menuSelect"/>
 
     <Switch
         android:layout_width="50dp"

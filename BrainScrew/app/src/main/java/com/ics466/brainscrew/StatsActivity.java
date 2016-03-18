@@ -5,8 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * StatsActivity is for the Stats screen where users can view their daily,
+ * weekly, monthly, and lifetime stats. Used with activity_stats.xml.
+ */
 public class StatsActivity extends AppCompatActivity {
 
+    /**
+     * Sets the screen layout and sets this screen to fullscreen-mode.
+     *
+     * @param savedInstanceState saved previous state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +27,25 @@ public class StatsActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    public void onPause() {
-        super.onPause();  // Always call the superclass method first
+    /**
+     * If the activity is not destroyed and is hidden behind other activities,
+     * when it resumes it will run the following code.
+     */
+    @Override
+    protected void onStart() {
+        super.onStart();  // Always call the superclass method first
 
+        View decorView = getWindow().getDecorView();
+
+        // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
     }
 
+    /**
+     * Will be called when the user resumes interaction with this activity. It
+     * will resume the activity in fullscreen-mode.
+     */
     public void onResume() {
         super.onResume();  // Always call the superclass method first
 
@@ -32,9 +55,22 @@ public class StatsActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    //MainMenu button clicked
+    /**
+     * Before navigating away from this activity, this code will run.
+     */
+    public void onPause() {
+        super.onPause();  // Always call the superclass method first
+    }
+
+    /**
+     * When the MAIN MENU button is clicked, it navigates the user to the home
+     * screen.
+     *
+     * @param view the current view.
+     */
     public void menuSelect(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Intent main = new Intent(this, MainActivity.class);
+        main.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(main);
     }
 }
