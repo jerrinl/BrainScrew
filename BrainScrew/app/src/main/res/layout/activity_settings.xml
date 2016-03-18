@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ics466.brainscrew.SettingsActivity"
-    android:background="#000000"
-    android:onClick="gotoMain">
+    android:background="#000000">
 
     <TextView
         android:layout_width="250dp"
@@ -77,8 +76,7 @@
         android:background="#000000"
         android:scaleType="fitCenter"
         android:layout_alignTop="@+id/imageButtonFB"
-        android:layout_toRightOf="@+id/imageButtonFB"
-        android:onClick="shareTwitter" />
+        android:layout_toRightOf="@+id/imageButtonFB" />
 
     <ImageButton
         android:layout_width="40dp"
@@ -88,29 +86,17 @@
         android:background="#000000"
         android:scaleType="fitCenter"
         android:layout_alignTop="@+id/textViewSocial"
-        android:layout_toEndOf="@+id/textViewSocial"
-        android:onClick="shareFB" />
+        android:layout_toEndOf="@+id/textViewSocial" />
 
     <Switch
         android:layout_width="50dp"
         android:layout_height="25dp"
         android:id="@+id/switchSFX"
         android:background="#777777"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/imageButtonFB"
-        android:layout_alignTop="@+id/textViewSFX"
-        android:onClick="switchSFX" />
-
-    <Switch
-        android:layout_width="50dp"
-        android:layout_height="25dp"
-        android:id="@+id/switchMusic"
-        android:background="#777777"
-        android:layout_below="@+id/textViewSettings"
-        android:layout_alignStart="@+id/switchSFX"
-        android:layout_alignTop="@+id/textViewMusic"
-        android:checked="false"
-        android:onClick="switchMusic" />
+        android:checked="true"
+        android:layout_below="@+id/textViewMusic"
+        android:layout_toEndOf="@+id/textViewSocial"
+        android:layout_alignTop="@+id/textViewSFX" />
 
     <ImageButton
         android:layout_width="200dp"
@@ -123,4 +109,15 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="gotoMain"/>
+
+    <Switch
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:id="@+id/switchMusic"
+        android:background="#777777"
+        android:checked="true"
+        android:layout_below="@+id/textViewSettings"
+        android:layout_alignStart="@+id/switchSFX"
+        android:layout_alignTop="@+id/textViewMusic" />
+
 </RelativeLayout>

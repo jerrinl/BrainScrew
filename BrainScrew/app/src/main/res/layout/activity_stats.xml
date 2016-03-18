@@ -22,7 +22,8 @@
         android:layout_centerHorizontal="true"
         android:gravity="bottom"
         android:textAlignment="center"
-        android:paddingBottom="20dp" />
+        android:paddingBottom="20dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="175dp"
@@ -34,7 +35,8 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="35dp" />
+        android:textSize="35dp"
+        android:textColor="#ffffff" />
 
     <ImageButton
         android:layout_width="40dp"
@@ -44,8 +46,7 @@
         android:scaleType="fitCenter"
         android:background="#000000"
         android:layout_below="@+id/textViewStatsTitle"
-        android:layout_toStartOf="@+id/textViewLabel"
-        android:onClick="scrollLeft" />
+        android:layout_toStartOf="@+id/textViewLabel" />
 
     <ImageButton
         android:layout_width="40dp"
@@ -55,8 +56,7 @@
         android:background="#000000"
         android:layout_below="@+id/textViewStatsTitle"
         android:layout_toEndOf="@+id/textViewLabel"
-        android:id="@+id/imageButtonArrowRight"
-        android:onClick="scrollRight" />
+        android:id="@+id/imageButtonArrowRight" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,7 +69,8 @@
         android:layout_marginTop="45dp"
         android:textStyle="bold"
         android:gravity="top"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,7 +82,8 @@
         android:gravity="top"
         android:layout_below="@+id/textViewPlayTime"
         android:layout_alignStart="@+id/textViewPlayTime"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,7 +95,8 @@
         android:gravity="top"
         android:layout_below="@+id/textViewCorrect"
         android:layout_alignStart="@+id/textViewCorrect"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -105,7 +108,8 @@
         android:gravity="top"
         android:layout_below="@+id/textViewWrong"
         android:layout_alignStart="@+id/textViewWrong"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -117,7 +121,8 @@
         android:gravity="top"
         android:layout_below="@+id/textViewBestColors"
         android:layout_alignStart="@+id/textViewBestColors"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -129,7 +134,8 @@
         android:gravity="top"
         android:layout_below="@+id/textViewWorstColors"
         android:layout_alignStart="@+id/textViewWorstColors"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -142,7 +148,8 @@
         android:textSize="14dp"
         android:textAlignment="textEnd"
         android:layout_alignTop="@+id/textViewPlayTime"
-        android:layout_alignRight="@+id/textViewStatsTitle" />
+        android:layout_alignRight="@+id/textViewStatsTitle"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -156,7 +163,8 @@
         android:textAlignment="textEnd"
         android:layout_toEndOf="@+id/textViewCorrect"
         android:layout_alignTop="@+id/textViewCorrect"
-        android:layout_alignRight="@+id/textViewStatsTitle" />
+        android:layout_alignRight="@+id/textViewStatsTitle"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -169,7 +177,8 @@
         android:textSize="14dp"
         android:textAlignment="textEnd"
         android:layout_below="@+id/textViewCorrect"
-        android:layout_alignEnd="@+id/textViewCorrectValue" />
+        android:layout_alignEnd="@+id/textViewCorrectValue"
+        android:textColor="#ffffff" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -224,6 +233,6 @@
         android:background="#000000"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="gotoMain" />
+        android:onClick="menuSelect" />
 
 </RelativeLayout>
