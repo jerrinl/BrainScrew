@@ -39,8 +39,6 @@ public class LevelsActivity extends AppCompatActivity {
 
     public void onPause() {
         super.onPause();  // Always call the superclass method first
-
-
     }
 
     public void onResume() {
@@ -52,9 +50,15 @@ public class LevelsActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
+    //MainMenu button clicked
+    public void menuSelect(View view) {
+        Intent menu = new Intent(this, MainActivity.class);
+        startActivity(menu);
+    }
+
     //Setting button clicked
     public void startClick(View view) {
-        Intent intent = new Intent(this, SettingsActivity.class);
+        Intent intent = new Intent(this, GameplayActivity.class);
         startActivity(intent);
     }
 
@@ -67,7 +71,7 @@ public class LevelsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 image_index++;
                 //if at end of image array return to the first image
-                if (image_index >= imageIds.length){
+                if (image_index >= imageIds.length) {
                     image_index = 0;
                 }
 

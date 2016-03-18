@@ -21,7 +21,6 @@ public class StatsActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();  // Always call the superclass method first
 
-
     }
 
     public void onResume() {
@@ -33,18 +32,8 @@ public class StatsActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-//    //Left Arrow clicked
-//    public void scrollLeft() {
-//
-//    }
-//
-//    //Right Arrow clicked
-//    public void scrollRight() {
-//
-//    }
-
     //MainMenu button clicked
-    public void gotoMain(View view) {
+    public void menuSelect(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

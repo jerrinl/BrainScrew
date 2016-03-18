@@ -11,8 +11,8 @@
     android:background="@color/background">
 
     <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="75dp"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
         android:src="@drawable/levels_start"
         android:scaleType="fitCenter"
 
@@ -20,9 +20,9 @@
         android:cropToPadding="false"
         android:background="#000000"
         android:onClick="startClick"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/imageButtonMainMenu"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="57dp" />
+        android:paddingBottom="10dp" />
 
     <ImageView
         android:layout_width="300dp"
@@ -51,8 +51,7 @@
         android:background="#000000"
         android:scaleType="fitCenter"
         android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/imageButtonStart"
-        android:onClick="onLeft" />
+        android:layout_toStartOf="@+id/easyDiff" />
 
     <ImageButton
         android:layout_width="50dp"
@@ -61,9 +60,10 @@
         android:src="@drawable/levels_arrowright"
         android:background="#000000"
         android:scaleType="fitCenter"
+
+        android:onClick="onRight"
         android:layout_alignTop="@+id/imageButtonArrowLeft"
-        android:layout_toEndOf="@+id/imageButtonStart"
-        android:onClick="onRight" />
+        android:layout_toEndOf="@+id/easyDiff" />
 
     <!--<ImageView-->
         <!--android:layout_width="200dp"-->
@@ -90,5 +90,18 @@
         android:src="@drawable/levels_easy"
         android:scaleType="fitCenter"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/imageButtonArrowLeft" />
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButtonMainMenu"
+        android:src="@drawable/mainmenu_noarrow"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="menuSelect" />
+
 </RelativeLayout>
