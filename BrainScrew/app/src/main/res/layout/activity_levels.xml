@@ -50,6 +50,7 @@
         android:src="@drawable/levels_arrowleft"
         android:background="#000000"
         android:scaleType="fitCenter"
+        android:onClick="onLeft"
         android:layout_centerVertical="true"
         android:layout_toStartOf="@+id/easyDiff" />
 
@@ -60,28 +61,9 @@
         android:src="@drawable/levels_arrowright"
         android:background="#000000"
         android:scaleType="fitCenter"
-
         android:onClick="onRight"
         android:layout_alignTop="@+id/imageButtonArrowLeft"
         android:layout_toEndOf="@+id/easyDiff" />
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:id="@+id/medDiff"
-        android:src="@drawable/levels_med"
-        android:scaleType="fitCenter"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/imageButtonArrowLeft" />
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:id="@+id/hardDiff"
-        android:src="@drawable/levels_hard"
-        android:scaleType="fitCenter"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/imageButtonArrowLeft" />
 
     <ImageView
         android:layout_width="200dp"

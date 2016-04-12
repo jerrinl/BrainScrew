@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
 /**
  * MainActivity is for the Home Screen where the user can navigate to the level select,
@@ -21,12 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        View decorView = getWindow().getDecorView();
-
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-
     }
 
     /**
@@ -36,12 +28,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();  // Always call the superclass method first
-
-        View decorView = getWindow().getDecorView();
-
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
     }
 
     /**
@@ -51,12 +37,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();  // Always call the superclass method first
-
-        View decorView = getWindow().getDecorView();
-
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
     }
 
     /**
@@ -74,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view the current view.
      */
     public void levelSelect(View view) {
-        Intent level = new Intent(this, LevelsActivity.class);
+        Intent level = new Intent(MainActivity.this, LevelsActivity.class);
         startActivity(level);
     }
 
@@ -84,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view the current view.
      */
     public void settingsSelect(View view) {
-        Intent settings = new Intent(this, SettingsActivity.class);
+        Intent settings = new Intent(MainActivity.this, SettingsActivity.class);
         startActivity(settings);
     }
 
@@ -94,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view the current view.
      */
     public void statsSelect(View view) {
-        Intent stats = new Intent(this, StatsActivity.class);
+        Intent stats = new Intent(MainActivity.this, StatsActivity.class);
         startActivity(stats);
     }
 

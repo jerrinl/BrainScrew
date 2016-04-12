@@ -20,11 +20,6 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-        View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
     }
 
     /**
@@ -34,12 +29,6 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();  // Always call the superclass method first
-
-        View decorView = getWindow().getDecorView();
-
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
     }
 
     /**
@@ -48,11 +37,6 @@ public class SettingsActivity extends AppCompatActivity {
      */
     public void onResume() {
         super.onResume();  // Always call the superclass method first
-
-        View decorView = getWindow().getDecorView();
-        // Hide the status bar.
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
 
     }
 
@@ -63,6 +47,10 @@ public class SettingsActivity extends AppCompatActivity {
         super.onPause();  // Always call the superclass method first
     }
 
+    public void onStop() {
+        super.onStop();  // Always call the superclass method first
+    }
+
     /**
      * When the MAIN MENU button is clicked, it will return the user to the
      * home screen.
@@ -70,8 +58,6 @@ public class SettingsActivity extends AppCompatActivity {
      * @param view the current view.
      */
     public void menuSelect(View view) {
-        Intent main = new Intent(this, MainActivity.class);
-        main.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(main);
+        finish();
     }
 }
