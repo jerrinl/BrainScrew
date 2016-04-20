@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mp.start();
+
+                Intent level = new Intent(MainActivity.this, LevelsActivity.class);
+                startActivity(level);
             }
         });
     }
