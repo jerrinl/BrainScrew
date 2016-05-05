@@ -118,6 +118,7 @@
         android:checked="true"
         android:layout_below="@+id/textViewSettings"
         android:layout_alignStart="@+id/switchSFX"
-        android:layout_alignTop="@+id/textViewMusic" />
+        android:layout_alignTop="@+id/textViewMusic"
+        android:onClick="backgroundSelect" />
 
 </RelativeLayout>

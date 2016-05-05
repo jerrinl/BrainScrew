@@ -1,15 +1,26 @@
 package com.ics466.brainscrew;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
+import android.media.MediaPlayer;
+import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Switch;
+
 
 /**
  * SettingsActivity is for the Settings screen  where users can toggle music and
  * sfx and connect their social media accounts. Used with activity_settings.xml.
  */
 public class SettingsActivity extends AppCompatActivity {
+
+    private Switch backgroundSwitch, sfxSwitch;
+    public boolean backgroundMusicBoolean;
+    public MediaPlayer backgroundPlayer;
 
     /**
      * Sets the screen layout and sets this screen to fullscreen-mode.
@@ -20,6 +31,9 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        //Check status of background music switch
+        backgroundSwitch = (Switch) findViewById(R.id.switchMusic);
     }
 
     /**
@@ -60,4 +74,7 @@ public class SettingsActivity extends AppCompatActivity {
     public void menuSelect(View view) {
         finish();
     }
+
 }
+
+
