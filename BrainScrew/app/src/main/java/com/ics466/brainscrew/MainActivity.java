@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view the current view.
      */
     public void levelSelect(View view) {
-        Intent level = new Intent(MainActivity.this, SettingsActivity.class);
-//        startActivity(level);
+        Intent level = new Intent(MainActivity.this, LevelsActivity.class);
+        startActivity(level);
     }
 
     /**
