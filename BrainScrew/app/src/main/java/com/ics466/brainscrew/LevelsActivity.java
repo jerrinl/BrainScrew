@@ -26,6 +26,7 @@ public class LevelsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        System.out.println("set activity levels");
         setContentView(R.layout.activity_levels);
     }
 
