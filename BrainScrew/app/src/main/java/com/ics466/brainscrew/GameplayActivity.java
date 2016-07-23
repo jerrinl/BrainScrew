@@ -33,7 +33,9 @@ public class GameplayActivity extends AppCompatActivity {
                                                 "PURPLE", "RED", "WHITE", "YELLOW"};
 
     public static final String[] colorHex = {"#0054a6", "#00a651", "#f26522", "#ee145b",
+                                                //blue, green, orange, pink
                                                 "#32004b", "#ff0000", "#ffffff", "#ffff00"};
+                                                //purple, red, white, yellow
 
     Integer[] topEdges = {R.drawable.gameplay_top_blue, R.drawable.gameplay_top_green,
                             R.drawable.gameplay_top_orange, R.drawable.gameplay_top_pink,
@@ -56,9 +58,11 @@ public class GameplayActivity extends AppCompatActivity {
                             R.drawable.gameplay_right_white, R.drawable.gameplay_right_yellow};
 
     Integer[] colors = new Integer[4];
+    Integer[] currStatus = new Integer[2];
 
     ImageView top, bot, left, right;
     TextView gameText;
+
 
 
     String message;
@@ -74,10 +78,12 @@ public class GameplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
         System.out.println("gameplay activity begin");
+
         top = (ImageView) findViewById(R.id.gameTop);
         bot = (ImageView) findViewById(R.id.gameBottom);
         left = (ImageView) findViewById(R.id.gameLeft);
         right = (ImageView) findViewById(R.id.gameRight);
+
         gameText = (TextView) findViewById(R.id.currText);
 
 
@@ -117,7 +123,7 @@ public class GameplayActivity extends AppCompatActivity {
 
 
     /**
-     * Generates a new set of borders.
+     * Generates a new set of borders. User must tap correct color.
      */
     public void onClick(View view){
 
@@ -147,20 +153,25 @@ public class GameplayActivity extends AppCompatActivity {
         System.out.println("Colors are " + colors[0] + " and " + colors[1] + " and " + colors[2] +
                             " and " + colors[3]);
 
-        int randText = colors[rnd.nextInt(4)];
-        System.out.println("The color name is " + colorNames[randText]);
-
-        gameText.setText(colorNames[randText]);
-
-        int randHex = colors[rnd.nextInt(4)];
-        System.out.println("randHex is" + randHex);
-        System.out.println("The color hex is " + colorHex[randHex]);
-        gameText.setTextColor(Color.parseColor(colorHex[randHex]));
-
+        randText(rnd);
 
 
         // returns a set of 4 colors.
         return colors;
+    }
+
+    public void randText(Random rnd){
+
+        int randText = colors[rnd.nextInt(4)];
+        gameText.setText(colorNames[randText]);
+
+        currStatus[0] = randText;
+
+        int randHex = colors[rnd.nextInt(4)];
+        gameText.setTextColor(Color.parseColor(colorHex[randHex]));
+
+        currStatus[1] = randHex;
+
     }
 
     /*
@@ -168,7 +179,6 @@ public class GameplayActivity extends AppCompatActivity {
      * the numbers are called in their respective arrays.
      */
     public void makeBorders(Integer[] choices){
-        System.out.println("Generating borders");
 
         System.out.println(choices[0]);
         System.out.println(choices[1]);
