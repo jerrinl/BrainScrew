@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -62,6 +63,8 @@ public class GameplayActivity extends AppCompatActivity {
 
     ImageView top, bot, left, right;
     TextView gameText;
+
+    int currentScore = 0;
 
 
 
@@ -127,7 +130,23 @@ public class GameplayActivity extends AppCompatActivity {
      */
     public void onClick(View view){
 
-        makeBorders(rand4());
+        makeBorders(rand4()); // sets the colors AND the game state
+
+        switch(view.getId()){
+            case R.id.gameTop:
+                if(currStatus[0] == colors[0]){
+                    scoreUp(true,true);
+                    Log.d("CORRECT TOP","tapped top object, correct");
+                }
+                break;
+            case R.id.gameBottom:
+                if(currStatus[0] == colors[1]){
+                    scoreUp(true,true);
+                }
+            default:
+                Log.d("DEFAULT","you fucked up");
+        }
+
     }
 
 
@@ -150,10 +169,10 @@ public class GameplayActivity extends AppCompatActivity {
         //colors are 4 random integers
         colors = list2.toArray(new Integer[list2.size()]);
 
-        System.out.println("Colors are " + colors[0] + " and " + colors[1] + " and " + colors[2] +
+        Log.d("COLOR SETTING","Colors are " + colors[0] + " and " + colors[1] + " and " + colors[2] +
                             " and " + colors[3]);
 
-        randText(rnd);
+        randText(rnd); // sets the current game state of randText and randHex.
 
 
         // returns a set of 4 colors.
@@ -165,12 +184,12 @@ public class GameplayActivity extends AppCompatActivity {
         int randText = colors[rnd.nextInt(4)];
         gameText.setText(colorNames[randText]);
 
-        currStatus[0] = randText;
+        currStatus[0] = randText; // corresponds to what WORD appears
 
         int randHex = colors[rnd.nextInt(4)];
         gameText.setTextColor(Color.parseColor(colorHex[randHex]));
 
-        currStatus[1] = randHex;
+        currStatus[1] = randHex; // what color
 
     }
 
@@ -180,6 +199,7 @@ public class GameplayActivity extends AppCompatActivity {
      */
     public void makeBorders(Integer[] choices){
 
+        Log.d("IMAGEVIEW","Making borders");
         System.out.println(choices[0]);
         System.out.println(choices[1]);
         System.out.println(choices[2]);
@@ -191,6 +211,22 @@ public class GameplayActivity extends AppCompatActivity {
         left.setImageResource(leftEdges[choices[2]]);
         right.setImageResource(rightEdges[choices[3]]);
 
+
+    }
+
+
+    /*
+     * Affects the game state (score, time?)
+     *
+     */
+    public void scoreUp(boolean correct, boolean time){
+        if(correct){
+            currentScore += 100;
+            System.out.println(currentScore);
+        }
+        else{
+            // print 'wrong'?
+        }
 
     }
 }
