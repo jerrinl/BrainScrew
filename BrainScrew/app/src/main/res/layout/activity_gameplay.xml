@@ -60,7 +60,8 @@
         android:contentDescription="@string/gameright"
 
         android:alpha="1"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:contextClickable="true" />
 
     <TextView
         android:layout_width="100dp"
@@ -74,6 +75,17 @@
         android:layout_centerHorizontal="true"
         android:textSize="25dp"
         android:onClick="onClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="gameTime"
+        android:id="@+id/textView"
+        android:layout_above="@+id/gameLeft"
+        android:layout_marginBottom="69dp"
+        android:singleLine="true"
+        android:layout_toEndOf="@+id/gameLeft" />
 
 
 </RelativeLayout>
