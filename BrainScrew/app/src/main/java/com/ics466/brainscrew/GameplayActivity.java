@@ -18,16 +18,6 @@ import java.util.Set;
 public class GameplayActivity extends AppCompatActivity {
 
 
-
-    public static final int BLU = 0;
-    public static final int GRN = 1;
-    public static final int ORG = 2;
-    public static final int PNK = 3;
-    public static final int PUR = 4;
-    public static final int RED = 5;
-    public static final int WHT = 6;
-    public static final int YLW = 7;
-
     public static final HashMap colorHash = new HashMap();
 
     public static final String[] colorNames = {"BLUE", "GREEN", "ORANGE", "PINK",
@@ -58,13 +48,16 @@ public class GameplayActivity extends AppCompatActivity {
                             R.drawable.gameplay_right_purple, R.drawable.gameplay_right_red,
                             R.drawable.gameplay_right_white, R.drawable.gameplay_right_yellow};
 
-    Integer[] colors = new Integer[4];
-    Integer[] currStatus = new Integer[2];
+    Integer[] colors = new Integer[4]; // 1-4 represents game status
+    Integer[] currStatus = new Integer[2]; // currStatus[0] is for current color, currStatus[1] is
+                                            // for current word on screen. if equal then correct.
 
     ImageView top, bot, left, right;
     TextView gameText;
 
     int currentScore = 0;
+
+    boolean timedMode = false;
 
 
 
@@ -89,14 +82,9 @@ public class GameplayActivity extends AppCompatActivity {
 
         gameText = (TextView) findViewById(R.id.currText);
 
-
-
         makeBorders(rand4());
 
     }
-
-
-
 
     /**
      * If the activity is not destroyed and is hidden behind other activities,
@@ -127,6 +115,7 @@ public class GameplayActivity extends AppCompatActivity {
 
     /**
      * Generates a new set of borders. User must tap correct color.
+     * gets the ID of what was clicked and checks if user correct.
      */
     public void onClick(View view){
 
@@ -134,14 +123,36 @@ public class GameplayActivity extends AppCompatActivity {
 
         switch(view.getId()){
             case R.id.gameTop:
-                if(currStatus[0] == colors[0]){
-                    scoreUp(true,true);
+                if(currStatus[1].equals(colors[0])){
+                    scoreUp(true);
                     Log.d("CORRECT TOP","tapped top object, correct");
+                }
+                else{
+                    scoreUp(false); // wrong answer for selecitng top
                 }
                 break;
             case R.id.gameBottom:
-                if(currStatus[0] == colors[1]){
-                    scoreUp(true,true);
+                if(currStatus[1].equals(colors[1])){
+                    scoreUp(true);
+                }
+                else{
+                    scoreUp(false);
+                }
+                break;
+            case R.id.gameLeft:
+                if(currStatus[1].equals(colors[2])){
+                    scoreUp(true);
+                }
+                else{
+                    scoreUp(false);
+                }
+                break;
+            case R.id.gameRight:
+                if(currStatus[1].equals(colors[3])){
+                    scoreUp(true);
+                }
+                else{
+                    scoreUp(false);
                 }
             default:
                 Log.d("DEFAULT","you fucked up");
@@ -219,7 +230,7 @@ public class GameplayActivity extends AppCompatActivity {
      * Affects the game state (score, time?)
      *
      */
-    public void scoreUp(boolean correct, boolean time){
+    public void scoreUp(boolean correct){
         if(correct){
             currentScore += 100;
             System.out.println(currentScore);
