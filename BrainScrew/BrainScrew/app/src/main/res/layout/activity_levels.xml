@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ics466.brainscrew.LevelsActivity"
+    android:background="@color/background">
+
+    <ImageButton
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:src="@drawable/levels_start"
+        android:scaleType="fitCenter"
+
+        android:id="@+id/imageButtonStart"
+        android:cropToPadding="false"
+        android:background="#000000"
+        android:onClick="startClick"
+        android:layout_above="@+id/imageButtonMainMenu"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:id="@+id/imageViewMode"
+        android:src="@drawable/levels_classicmode"
+        android:scaleType="fitCenter"
+        android:cropToPadding="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewDifficulty"
+        android:src="@drawable/levels_difficulty"
+        android:scaleType="fitCenter"
+        android:layout_above="@+id/easyDiff"
+        android:layout_alignStart="@+id/imageViewMode" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButtonArrowLeft"
+        android:src="@drawable/levels_arrowleft"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:onClick="onLeft"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/easyDiff" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButtonArrowRight"
+        android:src="@drawable/levels_arrowright"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:onClick="onRight"
+        android:layout_alignTop="@+id/imageButtonArrowLeft"
+        android:layout_toEndOf="@+id/easyDiff"
+        android:nestedScrollingEnabled="true" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/easyDiff"
+        android:src="@drawable/levels_easy"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButtonMainMenu"
+        android:src="@drawable/mainmenu_noarrow"
+        android:background="#000000"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="menuSelect" />
+
+</RelativeLayout>

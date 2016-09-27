@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ics466.brainscrew.SettingsActivity"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SETTINGS"
+        android:id="@+id/textViewSettings"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:textColor="@color/text_default"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MUSIC"
+        android:id="@+id/textViewMusic"
+        android:textColor="@color/text_default"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/textViewSettings"
+        android:layout_alignStart="@+id/textViewSettings"
+        android:gravity="top|center_vertical"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="35dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SFX"
+        android:id="@+id/textViewSFX"
+        android:textColor="@color/text_default"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/textViewMusic"
+        android:layout_alignLeft="@+id/textViewSettings"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="top" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SOCIAL"
+        android:id="@+id/textViewSocial"
+        android:textColor="@color/text_default"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/textViewSFX"
+        android:layout_alignLeft="@+id/textViewSettings"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:gravity="center_vertical" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageButtonTwitter"
+        android:src="@drawable/settings_twitter"
+        android:background="@color/background"
+        android:scaleType="fitCenter"
+        android:layout_alignTop="@+id/imageButtonFB"
+        android:layout_toRightOf="@+id/imageButtonFB" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageButtonFB"
+        android:src="@drawable/settings_fb"
+        android:background="@color/background"
+        android:scaleType="fitCenter"
+        android:layout_alignTop="@+id/textViewSocial"
+        android:layout_toEndOf="@+id/textViewSocial" />
+
+    <Switch
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:id="@+id/switchSFX"
+        android:background="#777777"
+        android:checked="true"
+        android:layout_below="@+id/textViewMusic"
+        android:layout_toEndOf="@+id/textViewSocial"
+        android:layout_alignTop="@+id/textViewSFX" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageButtonMainMenu"
+        android:layout_marginBottom="67dp"
+        android:src="@drawable/settings_mainmenu"
+        android:scaleType="fitCenter"
+        android:background="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="menuSelect"/>
+
+    <Switch
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:id="@+id/switchMusic"
+        android:background="#777777"
+        android:checked="true"
+        android:layout_below="@+id/textViewSettings"
+        android:layout_alignStart="@+id/switchSFX"
+        android:layout_alignTop="@+id/textViewMusic" />
+
+</RelativeLayout>
